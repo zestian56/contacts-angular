@@ -1,0 +1,22 @@
+<div class="wraper">
+  <app-card title="Contactos">
+    <div class="table">
+      <div class="table-head">
+        <div class="head-item">
+          Nombre
+        </div>
+        <div class="head-item">
+          Apellido
+        </div>
+        <div class="head-item">
+          Telefóno
+        </div>
+        <div class="head-item">
+          Acciones
+        </div>
+      </div>
+      <app-contact *ngFor='let contact of arrContacts;let i = index' [appTableRowColor]='i%2==0' [contact]='contact' >
+      </app-contact>
+    </div>
+  </app-card>
+</div>

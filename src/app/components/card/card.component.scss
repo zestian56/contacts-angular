@@ -1,0 +1,30 @@
+:host {
+    min-width: 80vw;
+    min-height: 10rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+    position: relative;
+    max-height: 80vh;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    background: white;
+    .space {
+        height:1px;
+    }
+    .title {
+        flex: 0 0 3rem;
+        background: rgba(73, 155, 234, 1);
+        background: linear-gradient(135deg, rgba(32, 124, 229, 1) 0%, rgba(73, 155, 234, 1) 100%);
+        color: white;
+        font-size: 1.3rem;
+        display: flex;
+        align-items: center;
+        padding-left: 1rem;
+        border-radius: 1rem 1rem 0 0;
+    }
+    .content {
+        flex-grow: 1;
+        flex-shrink: 1;
+        padding: 1rem 2rem;
+    }
+}

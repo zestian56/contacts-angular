@@ -1,0 +1,17 @@
+:host {
+    width: 100%;
+    .container {
+        display: flex;
+        transition: background .3s ease-in-out;
+        background: inherit;
+        &:hover {
+            background: rgba(0, 0, 0, 0.2)
+        }
+        .item {
+            text-transform: capitalize;
+            flex: 1 1 25%;
+            padding: 1rem 0.5rem;
+            border-bottom: solid rgba(0, 0, 0, 0.3) 1px;
+        }
+    }
+}
