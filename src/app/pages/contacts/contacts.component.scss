@@ -1,31 +1,75 @@
+$break-small: 850px;
+$break-large: 1200px;
+
 .wraper {
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: rgba(0, 0, 0, 0.2);
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .table {
+    max-height: 60vh;
+    min-height: 60vh;
+    overflow: auto;
+
+    .head-number {
+      display: flex;
+      justify-content: center;
+    }
+
+    .table-head {
+      display: flex;
+      position: sticky;
+      top: 0;
+      background: white;
+
+      .head-item {
+        text-transform: capitalize;
+        flex: 1 1 25%;
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: rgba(0, 0, 0, .54);
+        padding: 1.2rem 0.5rem;
+        border-bottom: solid rgba(0, 0, 0, 0.3) 1px;
+      }
+    }
+
+  }
+
+  .icon-button {
+    margin: 0 0.3rem 0 0.3rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    
-    .table {
-        max-height: 60vh;
-        overflow: auto;
-        .table-head {
-            display: flex;
-            position: sticky;
-            top: 0;
-            background:white;
-            .head-item {
-                text-transform: capitalize;
-                flex: 1 1 25%;
-                font-size: 0.8rem;
-                font-weight: 600;
-                color: rgba(0, 0, 0, .54);
-                padding: 1.2rem 0.5rem;
-                border-bottom: solid rgba(0, 0, 0, 0.3) 1px;
-            }
-        }
+    background: transparent;
+    border: none;
+    padding: 0;
+
+    width: 2rem;
+    height: 2rem;
+    font: inherit;
+    cursor: pointer;
+    border-radius: 50%;
+    outline: inherit;
+    transition: background .3s ease-in-out;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.7);
+
     }
+
+    img {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+  .add-button-container {
+      display:flex;
+      flex-direction: row-reverse;
+  }
 }

@@ -1,0 +1,80 @@
+.backdrop {
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+
+}
+
+.modal {
+  min-width: 25rem;
+  width: 30rem;
+  display: flex;
+  top: 10rem;
+  left: 25rem;
+  position: fixed;
+  flex-direction: column;
+
+  .form-item {
+    display: flex;
+    padding: 0.5rem 0;
+    margin-bottom: 0.5rem;
+    flex-direction: column;
+
+    label {
+      margin-bottom: 3px;
+      font-size: 1rem;
+    }
+
+    input {
+      outline: none;
+      padding: 0.3rem;
+      font-family: 'Roboto';
+      border: solid rgba(0, 0, 0, 0.2) 1px;
+      &:disabled {
+        background: inherit;
+        border: none;
+      }
+    }
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: flex-end;
+
+    button {
+      outline: none;
+      border: none;
+      margin: 0.3rem;
+      padding: 0.5rem;
+      border-radius: 0.5rem;
+      font-size: 1rem;
+      background: transparent;
+      transition: color .3s ease-in-out;
+      transition: background .3s ease-in-out;
+      transition: box-shadow .3s ease-in-out;
+      box-shadow: 0 0 0 rgba(0, 0, 0, 0.16), 0 0 0 rgba(0, 0, 0, 0.23);
+      color: rgba(255, 255, 255, 1);
+      background: #499bea;
+      background: linear-gradient(135deg, #207ce5 0%, #499bea 100%);
+      &:hover:enabled {
+        cursor: pointer;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+      }
+
+      &:disabled {
+        background: rgba(0, 0, 0, 0.05)
+      }
+    }
+
+    .red {
+      background: rgb(230, 76, 76);
+      background: linear-gradient(190deg, rgba(230, 76, 76, 1) 0%, rgba(214, 71, 67, 1) 44%, rgba(233, 79, 79, 1) 100%);
+    }
+  }
+}

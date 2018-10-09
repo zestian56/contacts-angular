@@ -1,0 +1,25 @@
+<div class="backdrop" (click)="handleActionEmitter('close',null,null)"></div>
+<app-card title="Contacto" class="modal">
+  <form name="form" #f="ngForm" (ngSubmit)="handleSubmit(strAction,f,numbContactIndex)">
+    <div class="form-item">
+      <label for="nombre">Nombre</label>
+      <input [(ngModel)]="objFormValues.nombre" #nombre="ngModel" name="nombre" id="nombre" type="text" aria-label="nombre"
+        [disabled]="strAction=='visualizar'" required>
+    </div>
+    <div class="form-item">
+      <label for="correo"> Correo</label>
+      <input [(ngModel)]="objFormValues.correo" #correo="ngModel" name="correo" id="correo" type="text" aria-label="correo"
+        [disabled]="strAction=='visualizar'" required>
+    </div>
+    <div class="form-item">
+      <label for="telefono">Telefóno</label>
+      <input [(ngModel)]="objFormValues.telefono" name="telefono" #telefono="ngModel" id="telefono" type="text"
+        aria-label="telefono" [disabled]="strAction=='visualizar'" required>
+    </div>
+    <div class="buttons">
+      <button class="red" (click)="handleActionEmitter('close',null,null)" type="button" aria-label="cancelar">Cancelar</button>
+      <button *ngIf="strAction=='editar'" type="submit" [disabled]="!f.valid" aria-label="guardar">Guardar</button>
+      <button *ngIf="strAction=='añadir'" type="submit" [disabled]="!f.valid" aria-label="añadir">Añadir</button>
+    </div>
+  </form>
+</app-card>

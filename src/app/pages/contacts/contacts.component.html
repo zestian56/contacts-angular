@@ -5,18 +5,34 @@
         <div class="head-item">
           Nombre
         </div>
-        <div class="head-item">
-          Apellido
+        <div class="head-item head-number">
+          Correo
         </div>
-        <div class="head-item">
+        <div class="head-item head-number">
           Telefóno
         </div>
-        <div class="head-item">
+        <div class="head-item head-number">
           Acciones
         </div>
       </div>
-      <app-contact *ngFor='let contact of arrContacts;let i = index' [appTableRowColor]='i%2==0' [contact]='contact' >
+      <app-contact *ngFor='let objContact of arrContacts;let i = index' [appTableRowColor]='i%2==0' [contact]='objContact'>
+        <button class="icon-button" (click)="contactActionHandler(1,i)" aria-label="añadir-contacto">
+          <img src="/assets/icons/baseline-edit-24px.svg" alt="icono editar">
+        </button>
+        <button class="icon-button" (click)="contactActionHandler(2,i)" aria-label="añadir-contacto">
+          <img src="/assets/icons/baseline-remove_red_eye-24px.svg" alt="icono-visualizar">
+        </button>
+        <button class="icon-button" (click)="contactActionHandler(3,i)" aria-label="añadir-contacto">
+          <img src="/assets/icons/baseline-delete-24px.svg" alt="icono-eliminar">
+        </button>
       </app-contact>
+    </div>
+    <div class="add-button-container">
+      <button class="icon-button" (click)="contactActionHandler(4,i)" aria-label="añadir-contacto">
+        <img src="/assets/icons/baseline-add_circle-24px.svg" alt="icono-añadir">
+      </button>
     </div>
   </app-card>
 </div>
+<app-form-modal *ngIf="boolIsOpen" [action]="strAction" [contact]="objContactFocus" [contactIndex]="numbContactFocusIndex"
+  (actionPerformed)='handleModal($event)'></app-form-modal>
