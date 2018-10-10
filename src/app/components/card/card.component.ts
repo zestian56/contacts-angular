@@ -17,5 +17,5 @@ export class CardComponent  {
       Tipo: Cadena,
       Descripción: recibido del padre, para asignar un titúlo a la card en el DOM
    */
-  @Input('title') strCardTitle: String;
+  @Input('cardTitle') strCardTitle: String;
 }

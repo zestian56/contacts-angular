@@ -18,7 +18,10 @@ export class ContactsComponent {
  */
   arrContacts: Array<Contact> = [
     new Contact('Alejandro Quinonez', '1244583', 'javier@gmail.com'),
-    new Contact('Sebastian Botero', '3750405', 'gg@gg.com')
+    new Contact('Sebastian Botero', '3750405', 'sebas-565@hotmail.com'),
+    new Contact('Mateo Tafurtz', '1244583', 'mateo@gmail.com'),
+    new Contact('Juan Cardona', '3750405', 'j.cardona@uao.edu.co'),
+    new Contact('Helén Brion', '3750405', 'Helen@brion.com')
   ];
   /** 
     Nombre: arrContacts,
